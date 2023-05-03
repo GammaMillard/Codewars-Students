@@ -7,11 +7,13 @@ const List = async () => {
     console.log(cats);
    
 
-    const data = await Promise.all(students.map(async(student,i) => getData(`https://www.codewars.com/api/v1/users/${student.username}`)
-       
-    ))
+    const data = await Promise.all(students.map(async(student,i) => {
+        const info = await getData(`https://www.codewars.com/api/v1/users/${student.username}`)
+        info.name = students[i].name
+        return info
+    }))
    
-
+    console.log(data);
     return (
         <div className="flex flex-wrap justify-between gap-4">
             {
