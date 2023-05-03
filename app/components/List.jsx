@@ -1,6 +1,6 @@
 import {  students } from "../utilities/students"
 import { getData } from "../utilities/utilities"
-import Student from "./Student/Student"
+import Student from "./Student"
 
 const List = async () => {
 

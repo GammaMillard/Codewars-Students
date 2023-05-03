@@ -1,15 +1,8 @@
 'use client'
-import classNames from "classnames"
-
-import './style.css'
-
-
-
 
 const Student = ({ student: { name, username, honor, ranks: { overall } }, img, position }) => {
 
-    const style2 = `p-5 text-white bg-[hsl(240,4.92%,11.96%)] animate-[appear_1s_${position * 0.2}s_both]`
-  
+    
     return (
         <div className={`p-5 text-white bg-[hsl(240,4.92%,11.96%)] animate-[appear_1s_${position * 0.2}s_both]
         hover:scale-105 
