@@ -15,9 +15,9 @@ export const students = [
         name : 'Jaime',
         username : 'Jaimejcr'
     },
+    {
+        name : 'Carlos',
+        username : 'carlos-brazon'
+    },
 ]
 
-export const getData = async(url) => {
-    const data = await fetch(url)
-    return data.json()
-}

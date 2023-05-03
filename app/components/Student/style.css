@@ -1,0 +1,17 @@
+@keyframes test {
+    0% {
+        transform: translate(0);
+    }
+
+    30%{
+        transform: rotate(10deg);
+    }
+   
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.test {
+    animation: test 1.3s forwards;
+}
