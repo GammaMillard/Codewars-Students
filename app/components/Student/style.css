@@ -13,5 +13,5 @@
 }
 
 .test {
-    animation: test 1.3s forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
 }
