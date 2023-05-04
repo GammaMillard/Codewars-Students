@@ -24,7 +24,7 @@ const Student = ({ student: { name, username, honor, ranks: { overall }, codeCha
             <p>{name}</p>
             <img className="w-32 h-32" src={img} alt="" />
             <p>{overall.name}</p>
-            <p>{`Katas completadas: ${totalCompleted}`}</p>
+            <p>{`Completed katas: ${totalCompleted}`}</p>
             <p>{`Honor: ${honor}`}</p>
             <button onClick={() => setOpenModal(true)} className="p-2 bg-blue-500 hover:scale-105" >Open</button>
         </div>
