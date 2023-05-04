@@ -28,7 +28,7 @@ const Student = ({ student: { name, username, honor, ranks: { overall } }, img, 
             <button onClick={() => setOpenModal(true)} className="p-2 bg-blue-500 hover:scale-105" >Open</button>
         </div>
             {
-                openModal && <StudentModal />
+                openModal && <StudentModal setOpenModal={setOpenModal}/>
             }
         </>
     )
