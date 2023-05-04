@@ -25,7 +25,7 @@ const List = async () => {
 
 
     return (
-        <div className="flex flex-wrap justify-between gap-4">
+        <div className="relative flex flex-wrap justify-between gap-4">
             {
                 sortedList.map((student, i) => <Student student={student} key={i} position={i + 1} img={cats[i].url} />)
             }
