@@ -19,5 +19,13 @@ export const students = [
         name : 'Carlos',
         username : 'carlos-brazon'
     },
+    {
+        name: 'Felipe',
+        username : 'AristizábalFelip'
+    },
+    {
+        name : 'Sebastian',
+        username : 'Sebastian0328'
+    }
 ]
 
