@@ -26,8 +26,8 @@ module.exports = {
           '100%': { transform: 'rotate(-360deg)' }
         },
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '0%, 100%': { transform: 'rotate(-7deg)' },
+          '50%': { transform: 'rotate(7deg)' },
         }
       },
       animation: {

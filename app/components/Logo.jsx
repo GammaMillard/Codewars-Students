@@ -2,7 +2,9 @@
 
 const Logo = () => {
   return (
-    <div>Logo</div>
+    <div>
+      <h1>UCL</h1>
+    </div>
   )
 }
 
