@@ -3,7 +3,7 @@
 import { useState } from "react"
 import StudentModal from "./StudentModal"
 
-const Student = ({ student: { name, username, honor, ranks: { overall } }, img, position }) => {
+const Student = ({ student: { name, username, honor, ranks: { overall }, codeChallenges: {totalCompleted} }, img, position }) => {
 
     const [openModal, setOpenModal] =useState(true)
 
@@ -24,7 +24,8 @@ const Student = ({ student: { name, username, honor, ranks: { overall } }, img, 
             <p>{name}</p>
             <img className="w-32 h-32" src={img} alt="" />
             <p>{overall.name}</p>
-            <p>{honor}</p>
+            <p>{`Katas completadas: ${totalCompleted}`}</p>
+            <p>{`Honor: ${honor}`}</p>
             <button onClick={() => setOpenModal(true)} className="p-2 bg-blue-500 hover:scale-105" >Open</button>
         </div>
             {
