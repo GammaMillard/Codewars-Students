@@ -1,12 +1,14 @@
 'use client'
-import { useContext, useState } from "react"
+import { useContext, useState, createContext} from "react"
 
 
-export const StudentsContext = useContext(null)
+export const StudentsContext = createContext({})
 
 const Context = ({children}) => {
 
     const [studentsObject, setStudentsObject] = useState({})
+
+    
 
     return (
         <StudentsContext.Provider value={{studentsObject, setStudentsObject}}>
