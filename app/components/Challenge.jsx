@@ -1,6 +1,6 @@
 'use client'
 
-const Challenge = ({ name, students, num }) => {
+const Challenge = ({ name, students }) => {
 
   return (
     <div className="text-white p-10 bg-red-500">
