@@ -25,9 +25,9 @@ const ChallengesList = ({ list, compleatedList }) => {
                 <li><button onClick={handleClick} className="px-2 py-3 bg-red-500 text-white">8 kyu</button></li>
                 <li><button onClick={handleClick} className="px-2 py-3 bg-red-500 text-white">7 kyu</button></li>
             </ul>
-            <div className="flex flex-col p-10 gap-10">
+            <div className="grid grid-cols-1 p-10 gap-10 lg:grid-cols-3">
                 {
-                    filterList.map(({ name, rank, id, url }, i) => <Challenge key={i} name={name} rank={rank.name} students={compleatedList[id]} url={url} />)
+                    filterList.map(({ name, rank, id, url, description, createdBy : username }, i) => <Challenge key={i} name={name} rank={rank.name} students={compleatedList[id]} username={username} description={description} url={url} />)
                 }
 
             </div>

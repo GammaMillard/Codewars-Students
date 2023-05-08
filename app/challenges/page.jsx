@@ -23,7 +23,7 @@ const ChallengesPage = async () => {
     console.clear()
     // {Data es el array que viene en el fetch}
     const { data } = await getData('https://www.codewars.com/api/v1/users/GammaMillard/code-challenges/completed')
-    const list = await Promise.all(data.map( ({slug}) => getData(`https://www.codewars.com/api/v1/code-challenges/${slug}`)))
+    const list = await Promise.all(data.map(({ slug }) => getData(`https://www.codewars.com/api/v1/code-challenges/${slug}`)))
 
     const promise = await Promise.all(students.map(async (student, i) => {
         const data = await getData(`https://www.codewars.com/api/v1/users/${student.username}/code-challenges/completed`)
@@ -33,16 +33,16 @@ const ChallengesPage = async () => {
 
     // CompleatedList Genera un Array con esta Interface : { id : string, data: string[]}
 
-    const compleatedList = promise.reduce((acc, { name, data }, i) => {
-        for (let i = 0; i < data.length; i++) {
-            const challenge = data[i].id
-            if (!Object.hasOwn(acc, challenge)) {
-                acc[challenge] = [name]
-                continue
-            }
-            acc[challenge].push(name)
+    const compleatedList = await promise.reduce((acc, { name, data }, i) => {
+        
+        data.forEach(challenge => {
 
-        }
+            if (!Object.hasOwn(acc, challenge.id)) {
+                acc[challenge.id] = [name]
+            }
+            acc[challenge.id].push(name)
+        })
+
         return acc
     }, {})
 
@@ -50,7 +50,7 @@ const ChallengesPage = async () => {
     return (
         <div className="flex flex-col p-10 gap-10 ">
             {/* {Name,rank,id} Pertencen a `Challenge` */}
-            <ChallengesList list={list} compleatedList={compleatedList}/>
+            <ChallengesList list={list} compleatedList={compleatedList} />
             {/* {
                 list.map(({name,rank,id}, i) => <Challenge key={i} name={name} rank={rank.name} students={compleatedList[id]} />)
             } */}
