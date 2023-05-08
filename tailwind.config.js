@@ -17,16 +17,15 @@ module.exports = {
     extend: {
       colors: {
         'dark-red': '#B0361E',
-        'gold': '#ECB612'
+        'gold': '#ECB612',
+        'modal-backdrop': "#00000088",
+        "card-background": "#222327"
       },
       boxShadow: {
         'image-shadow': '0 0 30px #B0361E',
         'gold': '0 0 30px #fcd303',
         'silver': '0 0 30px #faf9f2',
         'bronze': '0 0 30px #9c4803'
-      },
-      colors: {
-        "dark-red": "#B0361E"
       },
       keyframes: {
         appear: {
