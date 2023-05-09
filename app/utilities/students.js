@@ -1,23 +1,31 @@
 export const students = [
     {
-        name : 'Melisa',
-        username : 'melisaferrara'
+        name: 'Melisa',
+        username: 'melisaferrara'
     },
     {
-        name : 'Tito',
-        username : 'TitoAlcivar'
+        name: 'Tito',
+        username: 'TitoAlcivar'
     },
     {
-        name : 'Norman',
-        username : 'NormanFerreyra25'
+        name: 'Norman',
+        username: 'NormanFerreyra25'
     },
     {
-        name : 'Jaime',
-        username : 'Jaimejcr'
+        name: 'Jaime',
+        username: 'Jaimejcr'
     },
     {
-        name : 'Carlos',
-        username : 'carlos-brazon'
+        name: 'Carlos',
+        username: 'carlos-brazon'
     },
+    {
+        name: 'Felipe',
+        username: 'AristizábalFelip'
+    },
+    {
+        name: 'Sebastián',
+        username: 'Sebastian0328'
+    }
 ]
 

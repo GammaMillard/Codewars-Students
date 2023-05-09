@@ -19,7 +19,13 @@ module.exports = {
         'dark-red': '#B0361E',
         'gold': '#ECB612',
         'modal-backdrop': "#00000088",
-        "card-background": "#222327"
+        "card-background": "#222327",
+        "8kyu": "#edf0ee",
+        "7kyu": "#edf0ee",
+        "6kyu": "#ECB612",
+        "5kyu": "#ECB612",
+        "4kyu": "#0227f5",
+        "3kyu": "#0227f5",
       },
       boxShadow: {
         'image-shadow': '0 0 30px #B0361E',
