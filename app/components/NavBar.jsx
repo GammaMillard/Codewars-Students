@@ -3,7 +3,7 @@ import Logo from './Logo'
 
 const NavBar = () => {
   return (
-    <nav className='  flex justify-between w-full gap-3 py-10 text-white'>œ
+    <nav className='  flex justify-between w-full gap-3 py-10 text-white'>
         <Logo />
         <ul className='flex gap-24 text-xl' >
             <li className='py-2  px-2 rounded-lg hover:scale-110

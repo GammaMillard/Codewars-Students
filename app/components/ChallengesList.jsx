@@ -2,19 +2,24 @@
 
 import { useState } from "react"
 import Challenge from "./Challenge"
+import { cookies } from "next/dist/client/components/headers"
 
 const ChallengesList = ({ list, compleatedList }) => {
+    
+
+
+
 
 
 
     const [filterList, setFilterList] = useState(list)
 
-    
+
     const handleClick = (e) => {
-        console.log(e);
+        setCookies()
 
         setFilterList(() => {
-            return list.filter( ({rank}) => rank.name == e.target.innerText) 
+            return list.filter(({ rank }) => rank.name == e.target.innerText)
         })
     }
 
@@ -27,7 +32,7 @@ const ChallengesList = ({ list, compleatedList }) => {
             </ul>
             <div className="grid grid-cols-1 p-10 gap-10 lg:grid-cols-3">
                 {
-                    filterList.map(({ name, rank, id, url, description, createdBy : username }, i) => <Challenge key={i} name={name} rank={rank.name} students={compleatedList[id]} username={username} description={description} url={url} />)
+                    filterList.map(({ name, rank, id, url, description, createdBy: username }, i) => <Challenge key={i} name={name} rank={rank.name} students={compleatedList[id]} username={username} description={description} url={url} />)
                 }
 
             </div>

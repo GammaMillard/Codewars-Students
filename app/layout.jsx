@@ -11,6 +11,8 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  fetch(`api`).then(res => console.log(res))
   return (
     <Context>
       <html lang="en">

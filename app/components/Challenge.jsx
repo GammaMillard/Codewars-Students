@@ -1,9 +1,11 @@
 'use client'
-
+import { FaArrowRight } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Link from 'next/link'
+
+
 const Challenge = ({ name, students, rank, url }) => {
-  
+
   return (
     <div className="group text-white p-4 bg-card-background border border-dark-red rounded-lg flex justify-between hover:scale-105 transition-all duration-300">
       <div className='flex flex-col justify-center items-start gap-4'>
@@ -15,7 +17,7 @@ const Challenge = ({ name, students, rank, url }) => {
           }
         </div>
       </div>
-      <IconContext.Provider value={{ size: '4em', className:'p-4 bg-black rounded-full group-hover:animate-wiggle' }} >
+      <IconContext.Provider value={{ size: '4em', className: 'p-4 bg-black rounded-full group-hover:animate-wiggle' }} >
         <Link href={url} className='flex justify-center items-center'> <FaArrowRight /> </Link>
       </IconContext.Provider>
 

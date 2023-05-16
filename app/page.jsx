@@ -14,6 +14,8 @@ export const AllFetching = async (array) => {
 
 
 export default async function Home() {
+ 
+  
 
   const cats = await getData(`https://api.thecatapi.com/v1/images/search?limit=10`)
 

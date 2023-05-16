@@ -3,6 +3,7 @@ import { getData } from "../utilities/utilities"
 import { students } from "../utilities/students"
 import ChallengesList from "../components/ChallengesList"
 
+
 // const challengesFetch = async (array) => {
 //     const promise = await Promise.all(array.map(async (student, i) => {
 //         const data = await getData(`https://www.codewars.com/api/v1/users/${student.username}/code-challenges/completed`)
@@ -21,7 +22,9 @@ import ChallengesList from "../components/ChallengesList"
 
 const ChallengesPage = async () => {
     console.clear()
-    // {Data es el array que viene en el fetch}
+    
+    
+
     const { data } = await getData('https://www.codewars.com/api/v1/users/GammaMillard/code-challenges/completed')
     const list = await Promise.all(data.map(({ slug }) => getData(`https://www.codewars.com/api/v1/code-challenges/${slug}`)))
 
@@ -31,10 +34,14 @@ const ChallengesPage = async () => {
         return data
     }))
 
+
+  
+
+
     // CompleatedList Genera un Array con esta Interface : { id : string, data: string[]}
 
     const compleatedList = await promise.reduce((acc, { name, data }, i) => {
-        
+
         data.forEach(challenge => {
 
             if (!Object.hasOwn(acc, challenge.id)) {
